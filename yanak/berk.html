@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>leancy</title>
+        <meta name="description" content="discord : leancyy"/>
+        <meta property="og:title" content="leancy"/>
+        <meta property="og:description" content="discord : leancyy"/>
+        <meta property="og:image" content="https://media.discordapp.net/attachments/1159163299305369630/1183137677218959380/3ds.jpg?ex&#x3D;65873dd3&amp;amp;is&#x3D;6574c8d3&amp;amp;hm&#x3D;885d9b5ca777a6202636d5938a0d4fb415c0718ed74361559fb96a45e5e7008b&amp;amp;&#x3D;&amp;amp;format&#x3D;webp&amp;amp;width&#x3D;575&amp;amp;height&#x3D;572"/>
+        <meta property="og:url" content="yanak.online"/>
+        <meta property="og:type" content="website"/>
+        <meta name="theme-color" content="#10f000"/>
+        <link rel="stylesheet" href="/static/assets/css/landing3.css">
+        <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/1159163299305369630/1183137863982907392/cursor.png?ex&#x3D;65873e00&amp;amp;is&#x3D;6574c900&amp;amp;hm&#x3D;f63c42545a8d6ed99725f5247ea8dee21cef4e93d14f4b601a7212fae00e1eed&amp;amp;">
+
+<style>
+
+@font-face {
+    font-family: custom-font;
+    src: url(https://fonts.cdnfonts.com/s/85546/Satoshi-Medium.woff);
+}
+* {
+    font-family: custom-font;
+    cursor: url(https://files.catbox.moe/anb5ks.png) 16 16, auto !important;
+}
+
+body {
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    color: #fff;
+    background-color: #1F2128;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.imgundragable {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.customglow-username {
+    font-size: 30px;
+    margin-right: 10px;
+    color: #10f000;
+    font-weight: bold;
+    line-height: 2rem;
+    text-align: center;
+    filter: drop-shadow(0 0 0.2rem #10f000);
+}
+
+
+.username-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #10f000, 0 0 10px #10f000, 0 0 15px #10f000, 0 0 20px #10f000;
+    }
+    50% {
+        box-shadow: 0 0 20px #10f000, 0 0 30px #10f000, 0 0 40px #10f000, 0 0 50px #10f000;
+    }
+    100% {
+        box-shadow: 0 0 5px #10f000, 0 0 10px #10f000, 0 0 15px #10f000, 0 0 20px #10f000;
+    }
+}
+
+.avatar_effect {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin: 0 auto;
+    animation: glow 2s infinite;
+    margin-bottom: 10px;
+}
+
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+
+.rainbow-username {
+  font-size: 30px;
+  font-weight: bold;
+  
+  margin-right: 10px;
+  color: #ff0000;
+  animation: animate 3s linear infinite;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000;
+}
+
+@keyframes animate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+  /* border */
+  .border {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      padding: 39px 27px;
+      width: 100%;
+      max-width: 35.9rem;
+      border-radius: 35px;
+      backdrop-filter: blur(7px);
+      background-color: rgb(255, 0, 208, 0.13) !important;
+      box-shadow: 0 0 2.5px #00ffee;
+  }
+      
+  @media (max-width : 480px) {
+      .border {
+          left: 50%;
+          padding: 0px, 0px;
+          width: 80%;
+          max-width: 100%;
+          border-radius: 21px;
+      }
+  }
+  
+.role-icon-wrapper {
+    padding: 7px 10px 1.5px;
+    border-radius: 50px;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    display: inline-flex;
+    place-items: center;
+    margin: 2px auto 20px;
+    background-color: rgba(0, 0, 0, 0.09);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.icon:active {
+  transform: scale(1.2);
+}
+
+.icon {
+  transition: all 0.2s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.pixelated {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 1;
+    background: transparent url(https://i.imgur.com/EyzV6w4.png) repeat 0 0;
+}
+
+
+
+  /* icons */
+  social-icons {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+  
+  .icon {
+     margin: 3px;
+     width: 35px;
+     height: 35px;
+  }
+  
+  .icon-link {
+      margin: 10px;
+      text-decoration: none;
+      text-align: center;
+  }
+  
+  .icon-link:not(:nth-child(-n+8)) {
+      display: none;
+  }
+  
+  /* social media */
+  
+  .social-media {
+      text-align: center;
+      position: relative;
+  }
+  
+  .description {
+    font-size: 17px;
+        margin: 20px 0;
+      color: #fff;
+  }
+  
+  .username {
+      color: #777777;
+      font-size: 30px;
+      margin-right: 10px;
+      
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(150, 47, 191, 0.7), 0 0 20px rgba(255, 0, 80, 0.7), 0 0 30px rgba(0, 242, 234, 0.7);
+      animation: username 13s infinite;
+  }
+  
+
+  
+  .normal-username {
+    color: #fff;
+    font-size: 30px;
+    margin-right: 10px;
+    
+    font-weight: bold;
+}
+
+  
+
+.role-icon {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.role-icon img {
+    width: 31px;
+    height: 31px;
+}
+
+
+
+  .sparky-effect {
+    background-image: url(../static/userinfo/effects/sparkle.gif);
+    display: inline-block;
+    padding: 10px;
+}
+
+
+  .glowblue-username {
+    font-size: 30px;
+    margin-right: 10px;
+    
+    font-weight: bold;
+    line-height: 2rem;
+    text-align: center;
+    text-shadow: 0 0 10px #0000ff, 0 0 20px #0000ff, 0 0 30px #0000ff, 0 0 40px #0000ff, 0 0 50px #0000ff, 0 0 60px #0000ff, 0 0 70px #0000ff, 0 0 80px #0000ff;
+}
+
+
+
+
+
+@keyframes popin {
+    0% { transform: scale(0.5) translateX(-50%); }
+    100% { transform: scale(1) translateX(-50%); }
+}
+
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #f0f0f0;
+    font-weight: 580!important;
+    user-select: none;
+    padding: 5px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    display: block;
+    z-index: 1;
+    transform: scale(0) translateX(-50%);
+    left: 50%;
+    bottom: 110%;
+    letter-spacing: .01cm!important;
+    font-size: 14.3px;
+    transition: transform 0.1s ease-out;
+}
+
+
+.role-icon:hover .tooltip,
+.role-icon:focus-within .tooltip {
+    animation: popin 0.1s ease-out forwards;
+}
+
+
+
+  
+  /* glow animation */
+  
+  @keyframes username {
+      0% {
+          text-shadow: 0px 0px 9px #5539cc;
+          opacity: 1;
+      }
+      14% {
+          text-shadow: 0px 0px 9px #5539cc;
+          opacity: 0.50;
+      }
+      20% {
+          text-shadow: 0px 0px 5px #feda75,
+          0px 0px 5px #fa7e1e,
+          0px 0px 5px #d62976,
+          0px 0px 5px #962fbf,
+          0px 0px 5px #4f5bd5;
+          opacity: 1;
+      }
+      30% {
+          text-shadow: 0px 0px 5px #229ED9;
+          opacity: 0.25;
+      }
+      40% {
+          text-shadow: 0px 0px 10px #A00003;
+          opacity: 1;
+      }
+      50% {
+          text-shadow: 0px 0px 10px #FFFC00;
+          opacity: 0.25;
+      }
+      60% {
+          text-shadow: 0px 0px 5px #0079C1;
+          opacity: 1;
+      }
+      70% {
+          text-shadow: 0px 0px 5px gray;
+          opacity: 0.25;
+      }
+      80% {
+          text-shadow: 0px 0px 5px blue;
+          opacity: 1;
+      }
+      90% {
+          text-shadow: 0px 0px 5px #E60023;
+          opacity: 0.25;
+      }
+  }
+  
+
+.videobg {
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    position: absolute
+}
+
+#vidx {
+    width: 100vw;
+    height: 100vh;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1
+}
+
+@keyframes fadeinout{
+    0%{
+        background-position:-500%
+    }
+    100%{
+        background-position:500%
+    }
+}
+.fadeinoutname{
+    margin-right: 10px;
+    position:relative;
+    overflow:hidden;
+    background: linear-gradient(90deg,#000,#10f000,#10f000,#000);
+    background-repeat:no-repeat;
+    background-size:80%;
+    animation:fadeinout 2s linear infinite;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent
+}
+
+
+
+    </style>
+
+<style>
+.status {
+    color: #f23f43;
+    position: absolute;
+    font-size: 19.5px;
+    bottom: 3.5px;
+    left: 55.5px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none
+}
+
+.statuscontainer_dnd {
+    color: #f23f43;
+    position: absolute;
+    font-size: 19.5px;
+    bottom: 3.5px;
+    left: 55.5px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none
+}
+
+.statuscontainer_streaming {
+    color: #b93ff2;
+    position: absolute;
+    font-size: 19.5px;
+    bottom: 3.5px;
+    left: 55.5px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none
+}
+
+.statuscontainer_idle {
+    color: #eff23f;
+    position: absolute;
+    font-size: 19.5px;
+    bottom: 3.5px;
+    left: 55.5px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none
+}
+
+.statuscontainer_online {
+    color: #08d334;
+    position: absolute;
+    font-size: 19.5px;
+    bottom: 3.5px;
+    left: 55.5px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none
+}
+
+.statuscontainer_offline {
+    color: #858585;
+    position: absolute;
+    font-size: 19.5px;
+    bottom: 3.5px;
+    left: 55.5px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none
+}
+
+.container, .discordcontainer {
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    display: inline-flex;
+    place-items: center;
+}
+
+.profile-pic, .avatarcontainer {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.info h1, .infocontainer h1 {
+    text-align: left;
+    padding: 0;
+    margin: 0 0 0 11px;
+    font-size: 19.7px;
+    max-width: 240px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 630;
+}
+
+.status, .statuscontainer_dnd, .statuscontainer_idle, .statuscontainer_online {
+    position: absolute;
+    font-size: 19.5px;
+    bottom: 3.5px;
+    left: 55.5px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.status {
+    color: #f23f43;
+}
+
+.statuscontainer_dnd {
+    color: #f23f43;
+}
+
+.statuscontainer_idle {
+    color: #eff23f;
+}
+
+.statuscontainer_online {
+    color: #08d334;
+}
+
+.infocontainer h3 {
+    text-align: left;
+    padding: 0;
+    font-size: 13.2px;
+    font-weight: 520;
+    max-width: 270px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 3.5px 6px 0 11px;
+}
+
+@media (max-width: 767px) {
+    .info h1, .infocontainer h1 {
+        max-width: 115px;
+    }
+
+    .infocontainer h3 {
+        max-width: 115px;
+    }
+}
+
+@media (min-width: 768px) {
+    .info h1, .infocontainer h1 {
+        max-width: 170px;
+    }
+
+    .infocontainer h3 {
+        max-width: 170px;
+    }
+}
+
+@media (min-width: 992px) {
+    .info h1, .infocontainer h1 {
+        max-width: 210px;
+    }
+
+    .infocontainer h3 {
+        max-width: 210px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .info h1, .infocontainer h1 {
+        max-width: 240px;
+    }
+
+    .infocontainer h3 {
+        max-width: 270px;
+    }
+}
+
+@media (max-width: 359px) {
+    .info h1, .infocontainer h1 {
+        max-width: 100px;
+    }
+
+    .infocontainer h3 {
+        max-width: 100px;
+    }
+}
+
+.emojicss {
+    margin-top: -1px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 19px;
+    width: auto
+}
+
+</style>
+
+<script>
+var rev = "fwd";
+
+function titlebar(val) {
+    var msg = "leancy";
+    var speed = 100;
+    var pos = val;
+    var le = msg.length;
+    if (rev == "fwd") {
+        if (pos < le) {
+            pos = pos + 1;
+            scroll = msg.substr(0, pos);
+            document.title = "   > " + scroll + " <";
+            timer = window.setTimeout("titlebar(" + pos + ")", speed);
+        } else {
+            rev = "bwd";
+            timer = window.setTimeout("titlebar(" + pos + ")", speed);
+        }
+    } else {
+        if (pos > 0) {
+            pos = pos - 1;
+            var ale = le - pos;
+            scrol = msg.substr(0, pos);
+            document.title = "   > " + scrol + " <";
+            timer = window.setTimeout("titlebar(" + pos + ")", speed);
+        } else {
+            rev = "fwd";
+            timer = window.setTimeout("titlebar(" + pos + ")", speed);
+        }
+    }
+}
+titlebar(1);
+
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+  <!-- bio link by cryart -->
+<body>      
+
+ <div id="enter">
+        <p>tap in</p>
+</div>
+
+<div style="background-image:url(https://cdn.discordapp.com/attachments/1159163299305369630/1183137500777173112/lungskull_-_fake_percs.mp4?ex&#x3D;65873da9&amp;amp;is&#x3D;6574c8a9&amp;amp;hm&#x3D;0a518b880e1a04b45fa685c4e09184354e0d8b4cb6d7259314c5d401173e5838&amp;amp;); position: absolute; height: 100%; width: 100%; background-size: cover; background-position: 50%; z-index: -1;"></div>
+
+<div class="videobg">
+  <video id="vidx" loop playsinline draggable="false" autoplay>
+    <source src="https://cdn.discordapp.com/attachments/1159163299305369630/1183137500777173112/lungskull_-_fake_percs.mp4?ex&#x3D;65873da9&amp;amp;is&#x3D;6574c8a9&amp;amp;hm&#x3D;0a518b880e1a04b45fa685c4e09184354e0d8b4cb6d7259314c5d401173e5838&amp;amp;" type="video/mp4" id="video-source" /></video>
+</div>
+
+
+
+<div class="landing" id="landing">
+      
+<div id="particles-js"></div>
+
+<div class="border">
+  <div class="avatar">
+      <div class="avatar-container" style="display: flex; justify-content: center; align-items: center;">
+          <img src="https://cdn.discordapp.com/attachments/1184108265911623681/1184128717266636851/e5cdc55766ef9c9c07bd6ee586c33a3f.jpg?ex=658ad8ce&is=657863ce&hm=4cbf6a07a08f8db0f41c377b3e417add38d7155915e7a863c8a37d05c6b8752f&" alt="Avatar" class="imgundragable inline-effect avatar_effect">
+      </div>
+  </div>
+
+
+        <div class="social-media">
+            <!-- username -->
+
+
+            <div class="username-badge">
+              <div class="username-container">
+                <h1 class="customglow-username inline-effect">leancy</h1>
+              </div>
+            </div>
+
+
+
+
+
+
+            <!-- roles -->
+            <div class="role-icon-wrapper">
+
+
+
+
+
+
+
+
+
+
+
+            <div class="role-icon award2023">
+            <svg xmlns="http://www.w3.org/2000/svg" style="
+                color: #ffff66;
+                filter: drop-shadow(0 0 2.5px #ffff66);
+                vertical-align: -1px;
+                margin-right: 3px;
+                margin-left: 3px;
+                " width="27" height="27" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
+                <path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702z"/>
+                <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z"/>
+            </svg>
+              <span class="tooltip">2023</span>
+            </div>
+
+        </div>
+
+
+            <div id="discordrpc"></div>
+            <div id="discordrpcissue"></div>
+
+            <!-- description  -->
+                <p class="description scramble" style="filter: drop-shadow(0 0 2.5px #ff00ea);"></p>
+            
+        <div id="spotify"></div>
+        <div style="display: flex; align-items: center; justify-content: center;">
+          <svg style="filter: drop-shadow(0 0 0.2rem #10f000); margin-right: 4px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path d="M15.0007 12C15.0007 13.6569 13.6576 15 12.0007 15C10.3439 15 9.00073 13.6569 9.00073 12C9.00073 10.3431 10.3439 9 12.0007 9C13.6576 9 15.0007 10.3431 15.0007 12Z" stroke="#10f000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M12.0012 5C7.52354 5 3.73326 7.94288 2.45898 12C3.73324 16.0571 7.52354 19 12.0012 19C16.4788 19 20.2691 16.0571 21.5434 12C20.2691 7.94291 16.4788 5 12.0012 5Z" stroke="#10f000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+          </svg>
+          <span style="font-size: 0.9em;">1337</span>
+          <span style="color: #10f000; margin: 0 4px;">|</span>
+          <svg fill="#10f000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" viewBox="0 0 395.71 395.71" xml:space="preserve" style="filter: drop-shadow(0 0 0.2rem #10f000); margin-right: 4px;">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <path d="M197.849,0C122.131,0,60.531,61.609,60.531,137.329c0,72.887,124.591,243.177,129.896,250.388l4.951,6.738 c0.579,0.792,1.501,1.255,2.471,1.255c0.985,0,1.901-0.463,2.486-1.255l4.948-6.738c5.308-7.211,129.896-177.501,129.896-250.388 C335.179,61.609,273.569,0,197.849,0z M197.849,88.138c27.13,0,49.191,22.062,49.191,49.191c0,27.115-22.062,49.191-49.191,49.191 c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z"></path>
+              </g>
+            </g>
+          </svg>
+          <span style="font-size: 0.9em;">zirve</span>
+        </div>
+          <!-- socials  -->
+
+
+
+        </div>
+     </div>
+
+     </div>
+  </div>
+<audio loop="true" id="audio">
+        <source src="" type="audio/mpeg">
+    </audio>
+
+
+
+<script src="../static/userinfo/script.js"></script>
+<script src="/static/assets/js/enter.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+    var roleIconWrapper = document.querySelector('.role-icon-wrapper');
+    if (roleIconWrapper.innerHTML.trim() === '') {
+        roleIconWrapper.style.display = 'none';
+    }
+</script>
+
+<script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+  <script>
+window.addEventListener("load", (event) => {
+
+    new cursoreffects.rainbowCursor({
+  length: 3,
+  colors: ["#ff0000"],
+  size: 4,
+});
+});
+  </script>
+  
+
+
+<script>
+    var roleIconWrapper = document.querySelector('.role-icon-wrapper');
+    if (roleIconWrapper.innerHTML.trim() === '') {
+        roleIconWrapper.style.display = 'none';
+    }
+</script>
+
+
+  </script>
+
+<script>
+let text = `discord : leancyy`;
+let formattedText = text.replace(/(\r\n|\n|\r)/g, '<br>');
+console.log(formattedText)
+
+</script>
+
+<script>
+
+class TextScramble {
+    constructor(el) {
+        this.el = el;
+        this.chars = "!<>-_\\/[]{}â€”=+*^?#________";
+        this.update = this.update.bind(this);
+    }
+    setText(newText) {
+        const oldText = this.el.innerText;
+        const length = Math.max(oldText.length, newText.length);
+        const promise = new Promise((resolve) => this.resolve = resolve);
+        this.queue = [];
+        for (let i = 0; i < length; i++) {
+            const from = oldText[i] || "";
+            let to = newText[i] || "";
+            if (newText.substr(i, 4) === "<br>") {
+                to = "<br>";
+                i += 3;
+            }
+            const start = Math.floor(Math.random() * 40);
+            const end = start + Math.floor(Math.random() * 40);
+            this.queue.push({ from, to, start, end });
+        }
+        cancelAnimationFrame(this.frameRequest);
+        this.frame = 0;
+        this.update();
+        return promise;
+    }
+    update() {
+    let output = '';
+    let complete = 0;
+    for (let i = 0, n = this.queue.length; i < n; i++) {
+        let { from, to, start, end, char } = this.queue[i];
+        if (this.frame >= end) {
+            complete++;
+            output += to;
+        } else if (this.frame >= start) {
+            if (!char || Math.random() < 0.28) {
+                char = this.randomChar();
+                this.queue[i].char = char;
+            }
+            output += `<span style="color:#ff00ea!important;-webkit-background-clip:text!important;background-clip:text!important;">${char}</span>`;
+        } else {
+            output += from;
+        }
+    }
+    this.el.innerHTML = output;
+    if (complete === this.queue.length) {
+        this.resolve();
+    } else {
+        this.frameRequest = requestAnimationFrame(this.update);
+        this.frame++;
+    }
+}
+
+
+    randomChar() {
+        return this.chars[Math.floor(Math.random() * this.chars.length)];
+    }
+}
+const phrases = [
+    `discord : leancyy`,
+];
+const el = document.querySelector(".scramble");
+const fx = new TextScramble(el);
+let counter = 0;
+const next = () => {
+    let newText = phrases[counter].replace(/\n/g, '<br>');
+    fx.setText(newText).then(() => {
+        setTimeout(next, 3500);
+    });
+    counter = (counter + 1) % phrases.length;
+}
+next();
+  
+</script>
+
+
+
+
+    <script>
+particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 100,
+          density: {
+            enable: true,
+            value_area: 800,
+          },
+        },
+        color: {
+          value: "#ff00f7", 
+        },
+        shape: {
+          type: "circle", 
+        },
+        opacity: {
+          value: 0.8,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false,
+          },
+        },
+        size: {
+          value: 5,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 2,
+            size_min: 1,
+            sync: false,
+          },
+        },
+        line_linked: {
+          enable: false,
+        },
+        move: {
+          enable: true,
+          speed: 1, 
+          direction: "bottom",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: false,
+          },
+          onclick: {
+            enable: false,
+          },
+          resize: true,
+        },
+        modes: {
+          grab: {
+            distance: 400,
+            line_linked: {
+              opacity: 1,
+            },
+          },
+          bubble: {
+            distance: 250,
+            size: 0,
+            duration: 2,
+            opacity: 0,
+          },
+          repulse: {
+            distance: 400,
+            duration: 0.4,
+          },
+          push: {
+            particles_nb: 4,
+          },
+          remove: {
+            particles_nb: 2,
+          },
+        },
+      },
+      retina_detect: true,
+    });
+
+    </script>
+</body>
+
+</html>
