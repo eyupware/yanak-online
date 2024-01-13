@@ -1,35 +1,89 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var text = "developed by eyupxrq";
-    var textElement = document.getElementById("typing-text");
+// ——————————————————————————————————————————————————
+// TextScramble
+// ——————————————————————————————————————————————————
 
-    function typeWriter(text, i, fnCallback) {
-        if (i < text.length) {
-            textElement.innerHTML = text.substring(0, i+1) + '<span aria-hidden="true"></span>';
-            setTimeout(function() {
-                typeWriter(text, i + 1, fnCallback);
-            }, 150);
-        } else if (typeof fnCallback == 'function') {
-            setTimeout(fnCallback, 2000);
-        }
+
+
+class TextScramble {
+  constructor(el) {
+    this.el = el;
+    this.chars = '!<>-_\\/[]{}—=+*^?#_____/[]{}—=+*^?#!4453796342<>-_/[]{}—=+*^?#!<>-';
+    this.update = this.update.bind(this);
+  }
+  setText(newText) {
+    const oldText = this.el.innerText;
+    const length = Math.max(oldText.length, newText.length);
+    const promise = new Promise(resolve => this.resolve = resolve);
+    this.queue = [];
+    for (let i = 0; i < length; i++) {
+      const from = oldText[i] || '';
+      const to = newText[i] || '';
+      const start = Math.floor(Math.random() * 80);
+      const end = start + Math.floor(Math.random() * 80);
+      this.queue.push({ from, to, start, end });
     }
+    cancelAnimationFrame(this.frameRequest);
+    this.frame = 0;
+    this.update();
+    return promise;
+  }
+  update() {
+    let output = '';
+    let complete = 0;
+    for (let i = 0, n = this.queue.length; i < n; i++) {
+      let { from, to, start, end, char } = this.queue[i];
+      if (this.frame >= end) {
+        complete++;
+        output += to;
+      } else if (this.frame >= start) {
+        if (!char || Math.random() < 0.28) {
+          char = this.randomChar();
+          this.queue[i].char = char;
+        }
+        output += `<span class="dud">${char}</span>`;
+      } else {
+        output += from;
+      }
+    }
+    this.el.innerHTML = output;
+    if (complete === this.queue.length) {
+      this.resolve();
+    } else {
+      this.frameRequest = requestAnimationFrame(this.update);
+      this.frame++;
+    }
+  }
+  randomChar() {
+    return this.chars[Math.floor(Math.random() * this.chars.length)];
+  }}
 
-    // Start the typing animation after a delay
-    setTimeout(function() {
-        typeWriter(text, 0, function() {
-            // You can add additional actions after the typing animation is complete
-        });
-    }, 2000); // 1000 milliseconds = 1 second
-});
 
-document.addEventListener("DOMContentLoaded", function() {
-    var cursor = document.createElement("div");
-    cursor.className = "cursor";
-    document.body.appendChild(cursor);
+// ——————————————————————————————————————————————————
+// Example
+// ——————————————————————————————————————————————————
 
-    document.addEventListener("mousemove", function(e) {
-        var x = e.clientX;
-        var y = e.clientY;
-        cursor.style.left = x + "px";
-        cursor.style.top = y + "px";
-    });
-});
+const phrases = [
+'Eyup',
+'discord.gg/artic',
+'C#',
+'C++',
+'Java',
+'PHP',
+'Javascript/NodeJS',
+'GOLang',
+'Python',
+'Assembly'];
+
+const el = document.querySelector('.text');
+const fx = new TextScramble(el);
+
+let counter = 0;
+const next = () => {
+  fx.setText(phrases[counter]).then(() => {
+    setTimeout(next, 750);
+  });
+  counter = (counter + 1) % phrases.length;
+};
+
+next();
+

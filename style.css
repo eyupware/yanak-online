@@ -1,61 +1,62 @@
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-}
+	.time-frame {
+		background-color: hsl(0, 100%, 50%);
+		color: rgb(0, 0, 0);
+		width: auto;
+		min-width: 160px;
+		font-family: Arial;
+		margin:0 auto;
+		display:table;
+		padding:10px 10px;
+		
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
 
-.typing-container {
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translate(-40%, -40%);
-    text-align: center;
-}
+	.time-frame > div {
+		width: 100%;
+		text-align: center;
+	}
 
-#typing-text {
-    font-size: 24px;
-    color: #00FF00;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 1px solid #333;
-    animation: typing 2s steps(24) infinite;
-}
+	#date {
+		font-size: 18px;
+		color:#000000;
+	}
+	#time {
+		font-size: 32px;
+		line-height: 30px;
+		margin-top:5px;
+	}
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-body {
-    margin: 0;
-    overflow: hidden;
-}
 
-.custom-cursor {
-    position: fixed;
-    width: 24px;
-    height: 24px;
-    background: url('cursor.png') no-repeat;
-    background-size: cover;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 1000; /* İmleci diğer içeriklerin üzerine getir */
-}
-
-body {
-    cursor: url('cursor.png'), auto;
-}
-
-#solUstDugme {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    padding: 10px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#solUstDugme:hover {
-    background-color: #2980b9;
-}
+	@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+	html,
+	body {
+	  font-family: 'Roboto Mono', monospace;
+	  background: #212121;
+	  height: 100%;
+	}
+	.container {
+	  height: 100%;
+	  width: 100%;
+	  justify-content: center;
+	  align-items: center;
+	  display: flex;
+	}
+	.text {
+	  font-weight: 100;
+	  font-size: 40px;
+	  color: #ff0000;
+	}
+	.dud {
+	  color: #757575;
+	
+	}
+	.font {
+		text-shadow:1px 1px 15px rgb(236, 63, 63);
+	color:rgb(255, 0, 0);
+	  text-align: center;
+	   font-family: Roboto;
+	font-size:60px;
+    }
+	
